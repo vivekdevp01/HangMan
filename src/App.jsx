@@ -1,41 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Button from "./components/Buttons/Button";
-import TextInput from "./components/TextInput/TextInput";
-import TextInputForm from "./components/TextInputForm/TextInputForm";
-import TextInputFormCOntainer from "./components/TextInputForm/TextInputFormContainer";
+// import { useState } from "react";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "/vite.svg";
+// import "./App.css";
+// import Button from "./components/Buttons/Button";
+// import TextInput from "./components/TextInput/TextInput";
+// import TextInputForm from "./components/TextInputForm/TextInputForm";
+import { Route, Routes } from "react-router-dom";
+// import TextInputFormCOntainer from "./components/TextInputForm/TextInputFormContainer";
+import StartGame from "./pages/StartGame";
+import PlayGame from "./pages/PlayGame";
 
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
-    <div>
-      {/* <TextInputForm /> */}
-      <TextInputFormCOntainer />
-      {/* <Button
-        text={"Click me 1"}
-        onClickHandler={() => console.log("Hello 1")}
-        styleType="success"
-      />
-
-      <Button
-        text={"Click me 2"}
-        onClickHandler={() => console.log("Hello 2")}
-        styleType="warning"
-      />
-
-      <Button
-        text={"Click me 3"}
-        onClickHandler={() => console.log("Hello 3")}
-      />
-      <TextInput
-        label={"Hello"}
-        placeholder="What is your name"
-        onChangeHandler={(e) => console.log(e.target.value)}
-      /> */}
-    </div>
+    <Routes>
+      <Route path="/start" element={<StartGame />} />
+      <Route path="/play" element={<PlayGame />} />
+    </Routes>
   );
 }
 
